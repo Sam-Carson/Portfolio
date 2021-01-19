@@ -1,0 +1,92 @@
+
+
+
+/* Color Pallete
+    Dark Blue: #11151C;
+    Red: #C6482F;
+    Light Blue: #CEDFD9;
+    Navy Blue: #212D40;
+    White: #FEFEFA;
+*/
+
+/* Fonts
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+*/
+
+
+
+
+/* Baseline Styling */
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #11151C;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3{
+    margin: 0;
+    padding: 1em 0;
+}
+
+p{
+    margin: 0;
+    padding: 1em 0;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.btn{
+    display: inline-block;
+    background: rgba(198, 72, 47, 1);
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+    border: 1px solid#C6482F;
+    border-radius: 2em;
+}
+
+.btn:hover{
+    background: rgba(208, 82, 57, 0.8);
+    border: rgba(208, 82, 57, 0.8);
+    border: 1px solid#C6482F;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+/* Continued Styling */
+
+.banner-img{
+    background-image: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url(../img/banner-pic.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    z-index: -1;
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+}
+
+.content-wrap{
+    padding: 0 1.7em;
+}
+
