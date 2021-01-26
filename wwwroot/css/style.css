@@ -9,6 +9,15 @@
     White: #FEFEFA;
 */
 
+/* Additional Color Pallete
+    Magenta: #A41E1E;
+    Cyan: #15BAEA;
+    Blue: #154FEA
+
+*/
+
+
+
 /* Fonts
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -65,29 +74,89 @@ ul{
     margin: 0;
 }
 
-.btn{
-    display: inline-block;
-    background: rgba(198, 72, 47, 1);
-    color: #fff;
-    text-decoration: none;
-    padding: .5em 1em;
-    border: 1px solid#C6482F;
-    border-radius: 2em;
-}
-
-.btn:hover{
-    background: rgba(208, 82, 57, 0.8);
-    border: rgba(208, 82, 57, 0.8);
-    border: 1px solid#C6482F;
-    color: #fff;
-    transition: all 0.3s ease 0s;
-}
 
 /* Continued Styling */
 
 header{
-    height: 800px;
+    height: 100vh;
 }
+
+nav{
+    height: 10vh;
+
+}
+
+
+
+
+
+@media screen and (min-width: 700px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .nav-item{
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .nav-item, .nav-link{
+        color: #fff;
+        padding:0 15px;
+        text-decoration: none;
+    }
+    
+    .nav-item, .nav-link:hover{
+        color: #15BAEA;
+        transition: all 0.3s ease;
+    }
+    
+    #nav-resume{
+        margin-right: 5vw;
+    }
+
+    .nav-line{
+        height: 10px;
+        width: 1px;
+        background-color: #fff;
+        display: inline-block;
+    }
+}
+
+
+
+
+#project-list{
+    list-style: none;
+    margin: 35px;
+}
+
+.hero-img{
+    background-image: url(../img/mobile-banner.png);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (min-width: 700px){
+    header{
+        height: 800px;
+    }
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
 
 
 h2{
@@ -97,6 +166,10 @@ h2{
 
 .content-wrap{
     padding: 0 1.7em;
+}
+
+#banner-titles-container{
+    position: absolute;
 }
 
 /* section b */
