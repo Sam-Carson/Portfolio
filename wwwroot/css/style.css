@@ -50,13 +50,6 @@ h1, h2, h3{
     padding: 1em 0;
 }
 
-h1{
-    font-family: 'Permanent Marker', cursive;
-    font-size: 8em;
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-}
-
 p{
     margin: 0;
     padding: 1em 1em;
@@ -74,17 +67,105 @@ ul{
     margin: 0;
 }
 
+ion-icon{
+    color: #fff;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+.fade-in-left{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
 
 /* Continued Styling */
+
+
+
+/* Mobile Navigation */
+/*********************/
+/*********************/
+/*********************/
+/*********************/
 
 header{
     height: 100vh;
 }
 
-nav{
-    height: 10vh;
-
+.hamburger-container{  
+    margin: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    overflow: auto;
+    left: calc(107% - 100px);
+    top: 10px;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
 }
+
+.ham-links li a{
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    font-size: 1.8em;
+    line-height: 2.5em;
+    letter-spacing: 0.3em;
+}
+
+.ham-links{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.mobile-nav{
+    height: 100vh;
+    width: 80vw;
+    background: #154FEA;
+    position: relative;
+    display: block;
+    visibility: hidden; /* hides menu when not using, used for js */ 
+}
+
+
+
+.media-container{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.media-logo{
+    padding: 0.2em 0.6em;
+}
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/* End mobile navigation */
+
+
+
+
+/* Full Screen Navigation */
+
+.fullscreen-nav{
+    display: none;
+}
+
+
+
 
 
 

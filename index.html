@@ -7,7 +7,7 @@
     <title>Sam Carson</title>
     <link rel="shortcut icon" type="ico" href="wwwroot/img/favicon/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&family=Permanent+Marker&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&family=Permanent+Marker&family=Raleway:wght@100&family=Lato:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="wwwroot/css/style.css">
 </head>
 <body>
@@ -17,18 +17,25 @@
 
             </div>
             
+            <button class="hamburger-container">
+                <ion-icon name="menu-outline" size="large"></ion-icon>
+            </button>
             <nav class="mobile-nav">
-                <!-- <div class="hamburger">
-                    <div class="hamburger-line"></div>
-                    <div class="hamburger-line"></div>
-                </div>
                 <ul class="ham-links">
-                    <li><a href="">about me</a></li>
-                    <li><a href="">projects</a></li>
-                    <li><a href="">contact</a></li>
-                    <li><a href="">resume</a></li>
-                </ul> -->
-           <!-- Sam Carson - Software Developer - Seattle, Wa -->
+                    <li><a href="">PROJECTS</a></li>
+                    <li><a href="">RESUME</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul> 
+                <div>
+                    <div class="media-container">
+                        <a href="https://github.com/Sam-Carson"><ion-icon class="media-logo" name="logo-github" size="large"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/sam-carson-33152416a/"><ion-icon class="media-logo" name="logo-linkedin" size="large"></ion-icon></a>
+                    </div>
+                </div>
+            </nav>
+            <nav class="fullscreen-nav">
+                <!-- Sam Carson - Software Developer - Seattle, Wa -->
                 <ul class="fullscreen-nav">
                     <!-- include technologies similar to how viking has is
                     under about me section -->
@@ -41,6 +48,7 @@
                     <li class="nav-item" id="nav-resume"><a class="nav-link" href="#">resume</a></li>
                 </ul>  
             </nav>
+           
                       
         </div>
     </header>
@@ -50,7 +58,7 @@
         <!--section a-->
         <section id="section-a" class="grid">
             <div class="content-wrap">
-                <h2 class="content-title">About Me</h2>
+                <h2 class="content-title" class="fade-in-left">About Me</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a 
@@ -64,7 +72,7 @@
                 <!--section b-->
         <section id="section-b" class="grid">
             <div class="content-wrap">
-                <h2 class="content-title">Technologies</h2>
+                <h2 class="content-title" class="fade-in-left">Technologies</h2>
                 <ul id="tech-list" class="tech-grid">
                      <!--Icons made by Freepik "https://www.flaticon.com/authors/freepik" -->
                     <li class="tech-grid-item">
@@ -103,7 +111,7 @@
         </section>
         <section id="section-c" class="grid">
             <div class="content-wrap">
-                <h2 class="content-title">Projects</h2>
+                <h2 class="content-title" class="fade-in-left">Projects</h2>
                 <ul id="project-list">
                     <li>
                         <div>
@@ -151,5 +159,6 @@
             </div>
         </section>
     </main>    
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
