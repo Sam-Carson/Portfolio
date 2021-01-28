@@ -43,6 +43,7 @@ img{
     display: block;
     width: 100%;
     height: auto;
+    margin-top: 75px;
 }
 
 h1, h2, h3{
@@ -50,10 +51,7 @@ h1, h2, h3{
     padding: 1em 0;
 }
 
-p{
-    margin: 0;
-    padding: 1em 1em;
-}
+
 
 @media screen and (min-width: 800px){
     p{
@@ -76,15 +74,14 @@ button{
     border: none;
 }
 
-.fade-in-left{
-    opacity: 0;
-    transition: opacity 250ms ease-in;
+header{
+    position: relative;
 }
 
 
-/* Continued Styling */
 
 
+/* End baseline styling */
 
 /* Mobile Navigation */
 /*********************/
@@ -103,8 +100,8 @@ header{
     width: 50px;
     height: 50px;
     overflow: auto;
-    left: calc(107% - 100px);
-    top: 10px;
+    left: calc(104% - 100px);
+    top: calc(4%);
     cursor: pointer;
     padding: 0;
     background: transparent;
@@ -155,8 +152,61 @@ header{
 /*********************/
 /* End mobile navigation */
 
+/* hero styling*/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+
+.name-title-container{
+    left: 5%;
+    top: 100px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    grid-template-columns: auto auto;
+    width: 70vw;
+    height: 20vh;
+}
+
+#name-rotated{
+    display: flex;
+    transform: rotate(-90deg);
+    position: absolute;
+    overflow: visible;
+    font-size: 0.9em;
+    font-family: 'Raleway', sans-serif;
+    height:min-content; /* makes sure there is no space inside the padding: blue squre in box model */
+    top: 19%;
+    left: 0;
+}
+
+#job-title{
+    position: absolute;
+    left: 22%;
+    text-align: left;
+    line-height: 1.1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.7em;
+    padding: 0;
+    height: min-content; /* makes sure there is no space inside the padding: blue squre in box model */
+    left: 22%;
+}
 
 
+
+
+
+
+
+
+
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/* end hero styling */
 
 /* Full Screen Navigation */
 
@@ -213,7 +263,6 @@ header{
 
 #project-list{
     list-style: none;
-    margin: 35px;
 }
 
 .hero-img{
@@ -269,6 +318,7 @@ h2{
 .tech-img{
     height: 5em;
     width: 5em;
+    margin: 0;
 }
 
 #csharp{
@@ -276,5 +326,10 @@ h2{
     width: 5em;
 }
 
+/* section c */
+
+#top-project{
+    margin: 0;
+}
  
 
