@@ -1,42 +1,30 @@
-
-
-
 /* Color Pallete
-    Dark Blue: #11151C;
-    Red: #C6482F;
-    Light Blue: #CEDFD9;
-    Navy Blue: #212D40;
-    White: #FEFEFA;
-*/
+    Dark Blue: #0A192F;
+    Red: #FE5F55;
+    Gray: #B8B8B8;
+    White: #fff;
 
-/* Additional Color Pallete
-    Magenta: #A41E1E;
-    Cyan: #15BAEA;
-    Blue: #154FEA
-
-*/
-
-
-
-/* Fonts
+   Fonts
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Permanent Marker', cursive;
 */
-
-
-
 
 /* Baseline Styling */
 
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: #11151C;
-    color: #fff;
-    font-size: 1.1em;
+    background: #0A192F;
+    color: #B8B8B8;
+    font-size: 0.95em;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    color: #FE5F55;
 }
 
 img{
@@ -49,6 +37,7 @@ img{
 h1, h2, h3{
     margin: 0;
     padding: 1em 0;
+    color: #fff;
 }
 
 
@@ -66,7 +55,7 @@ ul{
 }
 
 ion-icon{
-    color: #fff;
+    color: #FE5F55;
 }
 
 button{
@@ -77,9 +66,6 @@ button{
 header{
     position: relative;
 }
-
-
-
 
 /* End baseline styling */
 
@@ -93,20 +79,55 @@ header{
     height: 100vh;
 }
 
-.hamburger-container{  
-    margin: 0;
+.sticky-nav{
+    width: 100%;
+    height: 60px;
     position: fixed;
-    overflow: hidden;
-    width: 50px;
-    height: 50px;
-    overflow: auto;
-    left: calc(104% - 100px);
-    top: calc(4%);
-    cursor: pointer;
-    padding: 0;
-    background: transparent;
-    border: none;
+    display: flex;
+    background: rgba(10, 25, 47, 0.9);
+    top: 0;
+    display: flex; /* keeps the logo and hamburger within the div */
+    justify-content: space-between;
+    z-index: 10;
 }
+
+.logo{
+    color: #FE5F55;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.3em;
+    width: min-content;
+    margin: 20px 0 20px 20px;
+}
+
+.hamburger-container{  
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    margin: 18px 20px 20px 0;
+}
+
+.burger-line{
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background-color: #FE5F55;
+    margin: 5px 0;
+}
+
+#line1{
+    width: 25px;
+}
+#line2{
+    width: 17px;
+    top: 8px;
+}
+#line3{
+    width: 10px;
+    top: 16px;
+
+}
+
+
 
 .ham-links li a{
     text-decoration: none;
@@ -125,16 +146,16 @@ header{
     text-align: left;
 }
 
-.mobile-nav{
+.mobile-nav-slide-out{
     height: 100vh;
     width: 80vw;
-    background: #154FEA;
-    position: relative;
+    top: 0;
+    background: #193E76;
+    position: fixed; /* fixes it to th side of the screen otherwise it would only be visible at the top */
     display: block;
     visibility: hidden; /* hides menu when not using, used for js */ 
+    z-index: 10; /* makes sure when called, it's infront of everything else */
 }
-
-
 
 .media-container{
     position: absolute;
@@ -160,12 +181,8 @@ header{
 
 .name-title-container{
     left: 0;
-    top: 100px;
+    top: -10px;
     position: absolute;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    grid-template-columns: auto auto;
     width: 70vw;
     height: 20vh;
 }
@@ -175,20 +192,27 @@ header{
     position: inherit;
     font-size: 0.9em;
     font-family: 'Raleway', sans-serif;
-    height:min-content; /* makes sure there is no space inside the padding: blue squre in box model */
-    top: 19%;
-    left: 0;
+    top: 20%;
+    left: -10px;
+    letter-spacing: 1px;
+    color: #FE5F55;
 }
 
 #job-title{
     position: inherit;
-    left: 58px;
+    left: 45px;
     text-align: left;
     line-height: 1.1em;
     font-family: 'Lato', sans-serif;
-    font-size: 2.7em;
+    letter-spacing: 2px;
+    font-size: 3em;
     padding: 0;
-    height: min-content; /* makes sure there is no space inside the padding: blue squre in box model */
+}
+
+.header-introduction{
+    justify-content: center;
+    padding: 25px;
+    margin-top: 150px;
 }
 
 
