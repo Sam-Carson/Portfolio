@@ -34,12 +34,11 @@ img{
     display: block;
     width: 100%;
     height: auto;
-    margin-top: 75px;
+    margin-top: 4.6875rem;
 }
 
 h1, h2, h3{
     margin: 0;
-    padding: 1em 0;
     color: #fff;
 }
 
@@ -88,7 +87,7 @@ header{
 
 .sticky-nav{
     width: 100%;
-    height: 60px;
+    height: 3.75;
     position: fixed;
     display: flex;
     background: rgba(10, 25, 47, 0.9);
@@ -101,15 +100,15 @@ header{
 .logo{
     color: #FE5F55;
     font-family: 'Permanent Marker', cursive;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.3rem;
     width: min-content;
-    margin: 20px 0 20px 20px;
+    margin: 1.25rem 0 1.25rem 1.25rem;
 }
 
 .hamburger-container{  
     cursor: pointer;
     position: relative;
-    margin: 18px 20px 20px 0;
+    margin: 1.125rem 1.25rem 1.25rem 0;
     width: 2.5rem;
     height: 2rem;
 }
@@ -117,23 +116,23 @@ header{
 .burger-line{
     position: absolute;
     right: 0;
-    height: 3px;
+    height: 0.1875rem;
     background-color: #FE5F55;
-    margin: 5px 5px;
+    margin: 0.3125rem;
     border: none;
     border-radius: 10px;
 }
 
 #line1{
-    width: 33px;
+    width: 2.0625rem;
 }
 #line2{
-    width: 23px;
-    top: 8px;
+    width: 1.4375rem;
+    top: 0.5rem;
 }
 #line3{
-    width: 15px;
-    top: 16px;
+    width: 0.9375rem;
+    top: 1rem;
 }
 
 .ham-links li a{
@@ -195,9 +194,9 @@ header{
 #introduction-welcome{
     color: #FE5F55;
     font-size: 1.2em;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    margin: 20px 0 0 0;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.5rem;
+    margin: 1.25rem 0 0 0;
 }
 
 #introduction-my-name{
@@ -211,7 +210,7 @@ header{
 
 #introduction-what-i-do{
     font-size: 1.8em;
-    margin: 30px 0 0 0;
+    margin: 1.875rem 0 0 0;
     font-weight: bolder;
     font-family: 'Lato', sans-serif;
     line-height: 2rem;
@@ -233,7 +232,7 @@ header{
 
 .header-description{
     justify-content: center;
-    padding: 25px;
+    padding: 1.5625rem;
     margin-top: 100vh;
 }
 
@@ -345,29 +344,7 @@ h2{
     position: absolute;
 }
 
-/* section b */
 
-.tech-grid{
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 1em;
-}
-
-.tech-grid-item{
-    padding: .5em;
-    margin: auto;
-}
-
-.tech-img{
-    height: 5em;
-    width: 5em;
-    margin: 0;
-}
-
-#csharp{
-    height: 5em;
-    width: 5em;
-}
 
 /* section c */
 
