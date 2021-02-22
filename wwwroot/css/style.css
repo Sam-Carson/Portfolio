@@ -67,23 +67,19 @@ button{
 
 header{
     position: relative;
-}
-
-footer{
-    margin-top: 20vh;
+    height: 100vh;
 }
 
 /* End baseline styling */
 
-/* Mobile Navigation */
-/*********************/
-/*********************/
-/*********************/
-/*********************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
-header{
-    height: 100vh;
-}
+/* Mobile Navigation */
 
 .sticky-nav{
     width: 100%;
@@ -161,6 +157,8 @@ header{
     display: block;
     visibility: hidden; /* hides menu when not using, used for js */ 
     z-index: 10; /* makes sure when called, it's infront of everything else */
+    transform: translateX(100%);
+    transition: transform 500ms ease-in right;
 }
 
 .media-container{
@@ -173,17 +171,22 @@ header{
 .media-logo{
     padding: 0.2em 0.6em;
 }
-/*********************/
-/*********************/
-/*********************/
-/*********************/
+
+.fullscreen-nav{
+    display: none;
+}
+
 /* End mobile navigation */
 
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+
 /* hero styling*/
-/*********************/
-/*********************/
-/*********************/
-/*********************/
+
 
 .name-title-container{
     padding: 8rem 0 0 2rem;
@@ -236,83 +239,64 @@ header{
     margin-top: 100vh;
 }
 
-
-
-
-
-
-
-
-
-/*********************/
-/*********************/
-/*********************/
-/*********************/
 /* end hero styling */
 
-/* Full Screen Navigation */
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
-.fullscreen-nav{
-    display: none;
+/* About Me Section */
+
+.aboutme-section{
+    margin-top: 5vh;
+    margin-bottom: 30vh;
 }
 
-
-
-
-
-
-
-
-@media screen and (min-width: 700px){
-    nav{
-        display: flex;
-        justify-content: space-between;
-        float: right;
-        align-items: center;
-        margin-top: 15px;
-    }
-    
-    .nav-item{
-        display: inline-block;
-        text-align: center;
-    }
-    
-    .nav-item, .nav-link{
-        color: #fff;
-        padding:0 15px;
-        text-decoration: none;
-    }
-    
-    .nav-item, .nav-link:hover{
-        color: #15BAEA;
-        transition: all 0.3s ease;
-    }
-    
-    #nav-resume{
-        margin-right: 5vw;
-    }
-
-    .nav-line{
-        height: 10px;
-        width: 1px;
-        background-color: #fff;
-        display: inline-block;
-    }
+.content-title{
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
 }
 
+.content-title::after{
+    content: "";
+    background-color: #FE5F55;
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 53%;
+    margin-left: 10px;
+    margin-top: 2px;
+}
 
+.section-body{
+    margin-top: 3rem;
+}
 
-
-#project-list{
+.tech-skills{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     list-style: none;
 }
 
-.hero-img{
-    background-image: url(../img/mobile-banner.png);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.tech-skills li{
+    margin-bottom: 0.3rem;
+}
+
+.tech-skills li::before{
+    content: "\027A5";
+    color: #FE5F55;
+    display: inline-block;
+    width: 2em;
+    margin-left: 2px;
+}
+
+#project-list{
+    list-style: none;
 }
 
 @media screen and (min-width: 700px){
@@ -330,7 +314,6 @@ header{
     color: white;
   }
 
-
 h2{
     font-family: 'Raleway', sans-serif;
     font-size: 2em;
@@ -344,12 +327,73 @@ h2{
     position: absolute;
 }
 
+/* End About Me Section */
 
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
-/* section c */
+/* Projects Section */
 
-#top-project{
-    margin: 0;
+#projects-title::after{
+    width: 70%;
 }
- 
 
+/* End Projeccts Section */
+
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+
+/* Contact Section */
+
+.contact-section{
+    margin-top: 25vh;
+}
+
+#contact-title::after{
+    width: 44%;
+}
+
+#contact-text{
+    text-align: center;
+}
+
+.contact-link{
+    color: #FE5F55;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    margin-top: 3rem;
+    font-size: 1.2em;
+    border: 1px solid #FE5F55;
+    border-radius: 4px;
+}
+
+.mail-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* End Contact Section */
+
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+
+
+/* Footer */
+
+footer{
+    margin-top: 10vh;
+    text-align: center;
+}
