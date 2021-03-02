@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sam Carson" />
+    <meta name="description" content="Sam Carson's personal website and developer portfolio.">
     <title>Sam Carson</title>
     <link rel="shortcut icon" type="ico" href="wwwroot/img/favicon/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,6 +21,20 @@
             <div class="navbar-logo">
                 <p class="logo">SMDC</p>
             </div>
+            <nav>
+                <!-- Sam Carson - Software Developer - Seattle, Wa -->
+                <ul class="fullscreen-nav">
+                    <!-- include technologies similar to how viking has is
+                        under about me section -->
+                    <li class="nav-item"><a class="nav-link" href="#">about me</a></li>
+                    <div class="nav-line"></div>
+                    <li class="nav-item"><a class="nav-link" href="#">projects</a></li>
+                    <div class="nav-line"></div>
+                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                    <div class="nav-line"></div>
+                    <li class="nav-item" id="nav-resume"><a class="nav-link" href="#">resume</a></li>
+                </ul>
+            </nav>
             <div class="hamburger-container">
                 <div class="burger-line" id="line1"></div>
                 <div class="burger-line" id="line2"></div>
@@ -29,10 +44,10 @@
 
         <nav class="mobile-nav-slide-out">
             <ul class="ham-links">
-                <li><a href="">PROJECTS</a></li>
-                <li><a href="">RESUME</a></li>
-                <li><a href="">CONTACT</a></li>
-                <li><a href="">ABOUT</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">projects</a></li>
+                <li><a href="">contact</a></li>
+                <li><a href="">resume</a></li>
             </ul>
             <div>
                 <div class="media-container">
@@ -45,40 +60,27 @@
                 </div>
             </div>
         </nav>
-        <nav>
-            <!-- Sam Carson - Software Developer - Seattle, Wa -->
-            <ul class="fullscreen-nav">
-                <!-- include technologies similar to how viking has is
-                    under about me section -->
-                <li class="nav-item"><a class="nav-link" href="#">about me</a></li>
-                <div class="nav-line"></div>
-                <li class="nav-item"><a class="nav-link" href="#">projects</a></li>
-                <div class="nav-line"></div>
-                <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
-                <div class="nav-line"></div>
-                <li class="nav-item" id="nav-resume"><a class="nav-link" href="#">resume</a></li>
-            </ul>
-        </nav>
+        
         <div class="name-title-container">
             <!-- make a title that say 'good morning', 'afternoon' or 'evening' depending on time of day-->
             <div>
-                <p class="header-introduction" class="fade-up" id="introduction-welcome">My name is</p>
+                <p class="header-introduction" id="introduction-welcome">My name is</p>
             </div>
             <div>
-                <h1 class="header-introduction" class="fade-up" id="introduction-my-name">Sam Carson.</h1>
+                <h1 class="header-introduction" id="introduction-my-name">Sam Carson.</h1>
             </div>
             <div>
-                <p class="header-introduction" class="fade-up" id="introduction-what-i-do">I build web sites and web
+                <p class="header-introduction" id="introduction-what-i-do">I build web sites and web
                     applications.</p>
             </div>
             <div id="header-description-container">
-                <p class="header-introduction" class="fade-up" id="header-short-description">I am a student at <a
+                <p class="header-introduction"  id="header-short-description">I am a student at <a
                         href="https://www.bellevuecollege.edu/">Bellevue College</a> based in the Seattle, WA area where
                     I am studying Application Development. My goal is to build applications that make the user believe
                     they found something special.</p>
             </div>
             <div>
-                <button class="resume-btn" class="fade-up">Resume</button>
+                <button class="resume-btn"><a href="wwwroot/pages/DeveloperResume.pdf">Resume</a></button>
             </div>
         </div>
     </header>
@@ -86,19 +88,19 @@
     <!--Main Content-->
     <main>
         <!-- ABOUT ME SECTION-->
-        <section class="aboutme-section">
+        <section class="aboutme-section fade-up from-bottom">
             <div class="content-wrap">
                 <div class="section-headers">
-                    <h2 class="content-title" class="fade-up" id="aboutme-title">About Me</h2>
+                    <h2 class="content-title" id="aboutme-title">About Me</h2>
                 </div>
                 <div class="section-body">
-                    <p class="fade-up">I am currently a student at <a href="https://www.bellevuecollege.edu/">Bellevue
+                    <p>I am currently a student at <a href="https://www.bellevuecollege.edu/">Bellevue
                             College</a>.
                         <br>I will graduate in the spring of 2022 with a bachelores degree
                         in Information Systems and Technologies - Application Development.
                     </p>
-                    <p class="fade-up">Here are the technologies I have been working with:</p>
-                    <ul class="tech-skills" class="fade-up">
+                    <p>Here are the technologies I have been working with:</p>
+                    <ul class="tech-skills">
                         <li>HTML & CSS</li>
                         <li>JavaScript</li>
                         <li>C# & .NET</li>
@@ -112,26 +114,26 @@
             </div>
         </section>
         <!-- PROJECTS SECTION -->
-        <section class="projects-section">
+        <section class="projects-section  fade-up from-bottom">
             <div class="content-wrap">
                 <div class="section-headers">
-                    <h2 class="content-title" class="fade-up" id="projects-title">Projects</h2>
+                    <h2 class="content-title" id="projects-title">Projects</h2>
                 </div>
             </div>
         </section>
         <!-- CONTACT INFORMATION -->
-        <section class="contact-section">
+        <section class="contact-section  fade-up from-bottom">
             <div class="content-wrap">
                 <div class="section-headers">
-                    <h2 class="content-title" class="fade-up" id="contact-title">Get in touch</h2>
+                    <h2 class="content-title" id="contact-title">Get in touch</h2>
                 </div>
-                <div class="section-body" class="fade-up" id="contact-text">
+                <div class="section-body" id="contact-text">
                     <p>I am currently seeking internship opportunities. If you are someone who is
                         seeking an intern
                         with good problem solving skills and a 'can-do' attitude, let's talk.</p>
                 </div>
                 <div class="mail-container">
-                    <a class="contact-link" class="fade-up" href="mailto:carsonsam4@gmail.com">E-Mail</a>
+                    <a class="contact-link fade-up" href="mailto:carsonsam4@gmail.com">E-Mail</a>
                 </div>
             </div>
         </section>
