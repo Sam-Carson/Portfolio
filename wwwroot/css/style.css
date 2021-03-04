@@ -4,6 +4,7 @@
     Gray: #B8B8B8;
     White: #fff;
     Light Blue: #193E76;
+    MobileNavBlue: #0E2343;
 
    Fonts
     font-family: 'Open Sans', sans-serif;
@@ -14,6 +15,10 @@
 */
 
 /* Baseline Styling */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -76,7 +81,7 @@ header {
 @media screen and (min-width: 600px) {
   section {
     margin: auto;
-    width: 60%;
+    width: 65%;
   }
   .content-wrap {
     padding: 0;
@@ -138,7 +143,8 @@ header {
 
 .hamburger-container {
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  right: 0;
   margin: 1.125rem 1.25rem 1.25rem 0;
   width: 2.5rem;
   height: 2rem;
@@ -168,7 +174,7 @@ header {
 
 .ham-links li a {
   text-decoration: none;
-  color: #fff;
+  color: #fe5f55;
   list-style: none;
   font-size: 1.8em;
   line-height: 2.5em;
@@ -187,13 +193,22 @@ header {
   height: 100vh;
   width: 80vw;
   top: 0;
-  background: #fe5f55;
+  background: #0e2343;
   position: fixed; /* fixes it to th side of the screen otherwise it would only be visible at the top */
   display: block;
   visibility: hidden; /* hides menu when not using, used for js */
   z-index: 10; /* makes sure when called, it's infront of everything else */
-  transform: translateX(100%);
-  transition: transform 500ms ease-in right;
+  transition: transform 500ms ease-in;
+  transform: translateX(-100%);
+}
+
+.mobile-nav-slide-out.appear {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+#mobile-nav-ionicons {
+  color: #fe5f55;
 }
 
 .media-container {
@@ -208,19 +223,84 @@ header {
 }
 
 .fullscreen-nav {
+  padding: 0;
+  margin: 0.8em 2em 0 0;
   visibility: hidden;
   display: flex;
   float: right;
   justify-content: space-between;
-  margin: 1.25em 1.75em;
+  counter-reset: number;
 }
 
-@media screen and (min-width: 750px) {
+.nav-item {
+  margin: 1.5em 2em;
+  font-family: "PT Mono", monospace;
+  font-size: 0.8em;
+}
+
+.nav-item::before {
+  counter-increment: number;
+  content: "0" counter(number) ".";
+  margin-right: 0.4em;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  color: #fe5f55;
+}
+
+.nav-link {
+  color: #b8b8b8;
+}
+
+.nav-link:hover {
+  color: #fe5f55;
+}
+
+.fixed-email-wrapper {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 770px) {
   .fullscreen-nav {
     visibility: visible;
   }
   .hamburger-container {
     visibility: hidden;
+  }
+
+  /* fixed email wrapper */
+  .fixed-email-wrapper {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    z-index: 10;
+    visibility: visible;
+  }
+  .fixed-email-wrapper-link {
+    writing-mode: vertical-rl;
+    font-family: "PT Mono", monospace;
+    color: #b8b8b8;
+    font-size: 14px;
+    margin: 20px auto;
+    padding: 9px;
+    letter-spacing: 0.1em;
+    -webkit-transition: 200ms ease-out;
+  }
+
+  .fixed-email-wrapper-link:hover {
+    color: #fe5f55;
+    -webkit-transition: 200ms ease-in;
+    transform: translateY(-10px);
+  }
+
+  .fixed-email-wrapper::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #fe5f55;
   }
 }
 
@@ -245,6 +325,12 @@ header {
   .name-title-container {
     padding: 28vh 0 0 2em;
   }
+  #header-description-container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
   #header-description-container {
     width: 60%;
   }
@@ -334,7 +420,7 @@ header {
   width: 100%;
   position: relative;
   align-items: center;
-  font-size: clamp(2.5em, 5vw, 7em);
+  font-size: clamp(2.5em, 5vw, 5em);
 }
 
 /* .content-title::after{

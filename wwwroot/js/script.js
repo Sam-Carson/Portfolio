@@ -1,6 +1,12 @@
-// Hamburger Navbar //
-const hamburger = document.getElementsByClassName('hamburger-container');
+
+// mobile nav
+const mobileNavToggle = document.getElementById('mobileNavBtn');
 const mobileNavSlideOut = document.getElementsByClassName('mobile-nav-slide-out');
+
+mobileNavToggle.addEventListener('click', () => {
+    
+
+})
 
 
 
@@ -8,7 +14,7 @@ const mobileNavSlideOut = document.getElementsByClassName('mobile-nav-slide-out'
 
 // fade in effect
 const fadeIn = document.querySelectorAll('.fade-up');
-let viewportHeight = self.innerHeight;
+const viewportHeight = self.innerHeight;
 
 const appearOptions = {
     threshold: 0,
@@ -31,3 +37,8 @@ fadeIn.forEach(fadeIn => {
     appearOnScroll.observe(fadeIn);
 });
 
+// smooth scroll
+const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800,
+    offset: 150
+});

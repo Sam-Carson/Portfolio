@@ -10,57 +10,58 @@
     <link rel="shortcut icon" type="ico" href="wwwroot/img/favicon/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400&family=Permanent+Marker&family=Raleway:wght@100&family=Lato:wght@900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400&family=Permanent+Marker&family=Raleway:wght@100&family=Lato:wght@900&family=PT+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="wwwroot/css/style.css">
 </head>
 
 <body>
-    <header id="banner" class="grid">
+    <header data-scroll-header id="banner" class="grid banner">
         <div class="sticky-nav">
             <div class="navbar-logo">
-                <p class="logo">SMDC</p>
+                <p class="logo"><a href="#">SMDC</a></p>
+            </div>
+            
+            <div class="hamburger-container" id="mobileNavBtn">
+                <div class="burger-line" id="line1"></div>
+                <div class="burger-line" id="line2"></div>
+                <div class="burger-line" id="line3"></div>
             </div>
             <nav>
                 <!-- Sam Carson - Software Developer - Seattle, Wa -->
                 <ul class="fullscreen-nav">
                     <!-- include technologies similar to how viking has is
                         under about me section -->
-                    <li class="nav-item"><a class="nav-link" href="#">about me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                     <div class="nav-line"></div>
-                    <li class="nav-item"><a class="nav-link" href="#">projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
                     <div class="nav-line"></div>
-                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
                     <div class="nav-line"></div>
-                    <li class="nav-item" id="nav-resume"><a class="nav-link" href="#">resume</a></li>
+                    <li class="nav-item" id="nav-resume"><a class="nav-link" href="wwwroot/pages/DeveloperResume.pdf">Resume</a></li>
                 </ul>
             </nav>
-            <div class="hamburger-container">
-                <div class="burger-line" id="line1"></div>
-                <div class="burger-line" id="line2"></div>
-                <div class="burger-line" id="line3"></div>
-            </div>
         </div>
 
         <nav class="mobile-nav-slide-out">
             <ul class="ham-links">
-                <li><a href="">about</a></li>
-                <li><a href="">projects</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="/#about">about</a></li>
+                <li><a href="/#projects">projects</a></li>
+                <li><a href="/#contact">contact</a></li>
                 <li><a href="">resume</a></li>
             </ul>
             <div>
                 <div class="media-container">
                     <a href="https://github.com/Sam-Carson">
-                        <ion-icon class="media-logo" name="logo-github" size="large"></ion-icon>
+                        <ion-icon class="media-logo" name="logo-github" size="large" id="mobile-nav-ionicons"></ion-icon>
                     </a>
                     <a href="https://www.linkedin.com/in/sam-carson-33152416a/">
-                        <ion-icon class="media-logo" name="logo-linkedin" size="large"></ion-icon>
+                        <ion-icon class="media-logo" name="logo-linkedin" size="large" id="mobile-nav-ionicons"></ion-icon>
                     </a>
                 </div>
             </div>
         </nav>
-        
+    
         <div class="name-title-container">
             <!-- make a title that say 'good morning', 'afternoon' or 'evening' depending on time of day-->
             <div>
@@ -84,11 +85,13 @@
             </div>
         </div>
     </header>
-
+    <div class="fixed-email-wrapper">
+        <a href="mailto:sam@sammdcarson.dev" class="fixed-email-wrapper-link">sam.sammdcarson.dev</a>
+    </div>
     <!--Main Content-->
     <main>
         <!-- ABOUT ME SECTION-->
-        <section class="aboutme-section fade-up from-bottom">
+        <section class="aboutme-section fade-up from-bottom" id="about">
             <div class="content-wrap">
                 <div class="section-headers">
                     <h2 class="content-title" id="aboutme-title">About Me</h2>
@@ -114,7 +117,7 @@
             </div>
         </section>
         <!-- PROJECTS SECTION -->
-        <section class="projects-section  fade-up from-bottom">
+        <section class="projects-section  fade-up from-bottom" id="projects">
             <div class="content-wrap">
                 <div class="section-headers">
                     <h2 class="content-title" id="projects-title">Projects</h2>
@@ -122,7 +125,7 @@
             </div>
         </section>
         <!-- CONTACT INFORMATION -->
-        <section class="contact-section  fade-up from-bottom">
+        <section class="contact-section  fade-up from-bottom" id="contact">
             <div class="content-wrap">
                 <div class="section-headers">
                     <h2 class="content-title" id="contact-title">Get in touch</h2>
@@ -133,7 +136,7 @@
                         with good problem solving skills and a 'can-do' attitude, let's talk.</p>
                 </div>
                 <div class="mail-container">
-                    <a class="contact-link fade-up" href="mailto:carsonsam4@gmail.com">E-Mail</a>
+                    <a class="contact-link fade-up" href="mailto:sam@sammdcarson.dev">E-Mail</a>
                 </div>
             </div>
         </section>
@@ -150,6 +153,7 @@
         </div>
         <p class="footer-p">Designed & built by Sam Carson</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="wwwroot/js/script.js"></script>
 </body>
