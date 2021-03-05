@@ -1,14 +1,28 @@
 
 // mobile nav
-const mobileNavToggle = document.getElementById('mobileNavBtn');
-const mobileNavSlideOut = document.getElementsByClassName('mobile-nav-slide-out');
+const mobileNavToggle = document.querySelector('.hamburger-container');
+const mobileNavSlideOut = document.querySelector('.mobile-nav-slide-out');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links');
+
+
 
 mobileNavToggle.addEventListener('click', () => {
-    
-
+    mobileNavSlideOut.classList.toggle('mobile-nav-slide-out-appear');
 })
 
 
+
+const forEach = (array, callback, scope) => {
+    for (var i = 0; i < array.length; i++){
+        callback.call(scope, i, array[i]);
+    }
+}
+
+forEach(mobileNavLinks, function (index, value) {
+    value.addEventListener('click', () => {
+        mobileNavSlideOut.classList.remove('mobile-nav-slide-out-appear');
+    })
+})
 
 
 

@@ -16,10 +16,6 @@
 
 /* Baseline Styling */
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -61,7 +57,7 @@ ul {
 }
 
 ion-icon {
-  color: #fe5f55;
+  color: #b8b8b8;
 }
 
 button {
@@ -174,19 +170,36 @@ header {
 
 .ham-links li a {
   text-decoration: none;
-  color: #fe5f55;
+  color: #b8b8b8;
   list-style: none;
-  font-size: 1.8em;
+  font-size: 0.8em;
   line-height: 2.5em;
   letter-spacing: 0.3em;
 }
 
+.ham-links li {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.ham-links li::before {
+  counter-increment: number;
+  content: "0" counter(number) ".";
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+  color: #fe5f55;
+  display: block;
+}
+
 .ham-links {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
+  font-family: "PT Mono", monospace;
+  counter-reset: number;
 }
 
 .mobile-nav-slide-out {
@@ -196,26 +209,32 @@ header {
   background: #0e2343;
   position: fixed; /* fixes it to th side of the screen otherwise it would only be visible at the top */
   display: block;
-  visibility: hidden; /* hides menu when not using, used for js */
+  visibility: visible; /* hides menu when not using, used for js */
   z-index: 10; /* makes sure when called, it's infront of everything else */
   transition: transform 500ms ease-in;
   transform: translateX(-100%);
 }
 
-.mobile-nav-slide-out.appear {
-  visibility: visible;
+.mobile-nav-slide-out-appear {
   transform: translateX(0);
 }
 
+@media screen and (min-width: 550px) {
+  .mobile-nav-slide-out {
+    width: 50vw;
+  }
+}
+
 #mobile-nav-ionicons {
-  color: #fe5f55;
+  color: #b8b8b8;
 }
 
 .media-container {
   position: absolute;
-  bottom: 20%;
+  bottom: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
 }
 
 .media-logo {
@@ -421,39 +440,45 @@ header {
   position: relative;
   align-items: center;
   font-size: clamp(2.5em, 5vw, 5em);
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
-/* .content-title::after{
-    content: "";
-    background-color: #FE5F55;
-    display: block;
-    position: relative;
-    height: 1px;
-    width: 150px;
-    margin-left: 10px;
-    margin-top: 2px;
+/* .content-title::after {
+  content: "";
+  background-color: #fe5f55;
+  display: inline-block;
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 2px;
 } */
 
 .section-body {
   margin-top: 3rem;
 }
 
-.tech-skills {
+.about-lists {
   display: grid;
   grid-template-columns: repeat(2, auto);
   list-style: none;
 }
 
-.tech-skills li {
+.about-lists li {
   margin-bottom: 0.3rem;
 }
 
-.tech-skills li::before {
+.about-lists li::before {
   content: "\027A5";
   color: #fe5f55;
   display: inline-block;
   width: 2em;
   margin-left: 2px;
+}
+
+#core-class-list {
+  display: block;
 }
 
 #project-list {
@@ -555,4 +580,14 @@ h2 {
 footer {
   margin-top: 10vh;
   text-align: center;
+}
+
+ion-icon {
+  -webkit-transition: 200ms ease-out;
+}
+
+ion-icon:hover {
+  color: #fe5f55;
+  -webkit-transition: 200ms ease-in;
+  transform: translateY(-10px);
 }

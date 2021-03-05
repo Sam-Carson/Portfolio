@@ -32,12 +32,10 @@
                 <ul class="fullscreen-nav">
                     <!-- include technologies similar to how viking has is
                         under about me section -->
+                    <li class="nav-item"><a class="nav-link" href="/#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-                    <div class="nav-line"></div>
                     <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
-                    <div class="nav-line"></div>
                     <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
-                    <div class="nav-line"></div>
                     <li class="nav-item" id="nav-resume"><a class="nav-link" href="wwwroot/pages/DeveloperResume.pdf">Resume</a></li>
                 </ul>
             </nav>
@@ -45,12 +43,12 @@
 
         <nav class="mobile-nav-slide-out">
             <ul class="ham-links">
-                <li><a href="/#about">about</a></li>
-                <li><a href="/#projects">projects</a></li>
-                <li><a href="/#contact">contact</a></li>
-                <li><a href="">resume</a></li>
+                <li><a href="/#" class="mobile-nav-links">Home</a></li>
+                <li><a href="/#about" class="mobile-nav-links">About</a></li>
+                <li><a href="/#projects" class="mobile-nav-links">Projects</a></li>
+                <li><a href="/#contact" class="mobile-nav-links">Contact</a></li>
+                <li><a href="wwwroot/pages/DeveloperResume.pdf" class="mobile-nav-links">Resume</a></li>
             </ul>
-            <div>
                 <div class="media-container">
                     <a href="https://github.com/Sam-Carson">
                         <ion-icon class="media-logo" name="logo-github" size="large" id="mobile-nav-ionicons"></ion-icon>
@@ -59,7 +57,6 @@
                         <ion-icon class="media-logo" name="logo-linkedin" size="large" id="mobile-nav-ionicons"></ion-icon>
                     </a>
                 </div>
-            </div>
         </nav>
     
         <div class="name-title-container">
@@ -76,7 +73,7 @@
             </div>
             <div id="header-description-container">
                 <p class="header-introduction"  id="header-short-description">I am a student at <a
-                        href="https://www.bellevuecollege.edu/">Bellevue College</a> based in the Seattle, WA area where
+                        href="https://www.bellevuecollege.edu/">Bellevue College</a> based in Seattle, WA where
                     I am studying Application Development. My goal is to build applications that make the user believe
                     they found something special.</p>
             </div>
@@ -93,17 +90,26 @@
         <!-- ABOUT ME SECTION-->
         <section class="aboutme-section fade-up from-bottom" id="about">
             <div class="content-wrap">
-                <div class="section-headers">
-                    <h2 class="content-title" id="aboutme-title">About Me</h2>
-                </div>
+                    <h2 class="content-title" id="aboutme-title"><span>About Me</span></h2>
                 <div class="section-body">
                     <p>I am currently a student at <a href="https://www.bellevuecollege.edu/">Bellevue
                             College</a>.
+                            <br />
                         <br>I will graduate in the spring of 2022 with a bachelores degree
-                        in Information Systems and Technologies - Application Development.
+                        in Information Systems and Technologies with a focus in Application Development.
                     </p>
+                    <p>Completed Core Couses:</p>
+                    <ul class="about-lists" id="core-class-list">
+                        <li>Object-oriented Programming - C#</li>
+                        <li>Client-side Web Development</li>
+                        <li>Server-side Web Development</li>
+                        <li>Advanced Web Development</li>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Enterprise Data Applications - SQL & Entity Framework</li>
+                        <li>Software Testing</li>
+                    </ul>
                     <p>Here are the technologies I have been working with:</p>
-                    <ul class="tech-skills">
+                    <ul class="about-lists">
                         <li>HTML & CSS</li>
                         <li>JavaScript</li>
                         <li>C# & .NET</li>
@@ -157,5 +163,4 @@
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="wwwroot/js/script.js"></script>
 </body>
-
 </html>
