@@ -56,3 +56,12 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800,
     offset: 150
 });
+
+
+// Fix about me section to show up sooner
+
+// delete unecassary comments
+
+ // add tower of hanoi to projects section
+
+ // set body max body width for larger screens
