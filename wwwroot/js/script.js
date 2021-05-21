@@ -3,6 +3,7 @@
 const mobileNavToggle = document.querySelector('.hamburger-container');
 const mobileNavSlideOut = document.querySelector('.mobile-nav-slide-out');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-links');
+const logo = document.getElementsByClassName('logo');
 
 
 
@@ -61,7 +62,5 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 // Fix about me section to show up sooner
 
 // delete unecassary comments
-
- // add tower of hanoi to projects section
 
  // set body max body width for larger screens
