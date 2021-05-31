@@ -33,7 +33,7 @@ const viewportHeight = self.innerHeight;
 
 const appearOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -150px 0px"
+    rootMargin: "0px 0px 200px 0px"
 };
 
 const appearOnScroll = new IntersectionObserver
@@ -57,10 +57,3 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800,
     offset: 150
 });
-
-
-// Fix about me section to show up sooner
-
-// delete unecassary comments
-
- // set body max body width for larger screens

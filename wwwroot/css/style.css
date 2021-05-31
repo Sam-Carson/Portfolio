@@ -84,6 +84,18 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  section {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  section {
+    width: 50%;
+  }
+}
+
 .fade-up {
   opacity: 0;
   transition: opacity 400ms ease-in;
@@ -469,7 +481,7 @@ header {
 
 .aboutme-section {
   margin-top: 5vh;
-  margin-bottom: 30vh;
+  margin-bottom: 15vh;
 }
 
 .content-title {
@@ -629,6 +641,7 @@ h2 {
 .individual-projects-header {
   font-size: 1.4em;
   font-size: clamp(1.4em, 3.5vw, 1.1em);
+  font-family: "Raleway", sans-serif;
   color: #fff;
   text-align: center;
   margin: 1rem 0;
@@ -640,18 +653,55 @@ h2 {
   color: #fe5f55;
 }
 
-#ToHimg {
+#ToH-img {
   margin-top: 2rem;
 }
+#wishlist-img {
+  height: 40%;
+  width: 40%;
+  margin: auto;
+  margin-top: 3rem;
+}
 
-@media screen and (min-width: 1500px) {
-  .project-description-container {
+@media screen and (min-width: 900px) {
+  #ToH-img,
+  #wishlist-img {
+    height: 70%;
     width: 70%;
     margin: auto;
   }
-  #ToHimg {
-    width: 800px;
-    margin: 10% auto 0 auto;
+}
+
+@media screen and (min-width: 1100px) {
+  .project-container {
+    margin-top: 5rem;
+  }
+  .ToH-container {
+    margin: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .projects-section {
+    margin: auto;
+  }
+  .project-description-container {
+    width: 60%;
+    margin: auto;
+  }
+  #ToH-img {
+    width: 500px;
+    height: auto;
+  }
+
+  .wishlist-container {
+    margin: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10rem;
+  }
+  #wishlist-img {
+    width: 300px;
+    height: auto;
   }
 }
 
@@ -667,7 +717,7 @@ h2 {
 /* Contact Section */
 
 .contact-section {
-  margin-top: 25vh;
+  margin-top: 20vh;
 }
 
 #contact-title {
@@ -683,7 +733,7 @@ h2 {
 
 @media screen and (min-width: 1500px) {
   #contact-text {
-    width: 60%;
+    width: 80%;
   }
 }
 
